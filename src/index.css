@@ -1,0 +1,7 @@
+/* FONTS */
+@import url("https://fonts.cdnfonts.com/css/inter");
+
+/* TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
