@@ -2,9 +2,10 @@ import {useNavigate} from "react-router-dom"
 
 export default function Navbar() {
 	const navigate = useNavigate()
+
 	return (
-		<div className='sticky top-0 z-50 bg-gray-200 bg-opacity-20 backdrop-blur-sm text-black font-bold'>
-			<div className='navbar max-w-6xl m-auto'>
+		<div id='navbar' className='sticky top-0 z-50 bg-white bg-opacity-70 backdrop-blur-sm text-black font-bold'>
+			<div id='nav-child' className='navbar max-w-6xl m-auto'>
 				<div className='navbar-start'>
 					<div className='dropdown'>
 						<div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
@@ -32,7 +33,7 @@ export default function Navbar() {
 					</a>
 				</div>
 				<div className='navbar-center hidden lg:flex'>
-					<ul className='text-lg menu menu-horizontal px-1 font-normal'>
+					<ul className='text-lg menu menu-horizontal px-1 font-normal gap-5'>
 						<li>
 							<a onClick={() => navigate("/")}>Home</a>
 						</li>
@@ -48,7 +49,7 @@ export default function Navbar() {
 					</ul>
 				</div>
 				<div className='navbar-end invisible sm:visible'>
-					<a className='btn text-white text-lg'>Download CV</a>
+					<a className='btn bg-indigo-600 border-none text-white text-lg'>Download CV</a>
 				</div>
 			</div>
 		</div>
