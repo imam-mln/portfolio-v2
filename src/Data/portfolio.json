@@ -28,5 +28,11 @@
 		"desc": "Scrape data from Grab's Website import data to Dodolans App",
 		"img": "src/assets/automated-stock-control.jpg",
 		"link": "https://youtu.be/ITJhbdym_10"
+	},
+	{
+		"title": "Automated Stock Control (ASCO)",
+		"desc": "Scrape data from Grab's Website import data to Dodolans App",
+		"img": "src/assets/automated-stock-control.jpg",
+		"link": "https://youtu.be/ITJhbdym_10"
 	}
 ]
