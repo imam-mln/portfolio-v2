@@ -1,4 +1,4 @@
-import {HashRouter as Router, Routes, Route} from "react-router-dom"
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 // COMPONENTS
 import Navbar from "./Components/Navbar"
@@ -13,7 +13,7 @@ import NotFound from "./Pages/NotFound"
 
 function App() {
 	return (
-		<Router>
+		<Router basename='/web-app-portfolio/'>
 			<Navbar />
 			<Routes>
 				<Route path='/' element={<Home />} />
