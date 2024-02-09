@@ -1,8 +1,9 @@
 import {useState, useEffect} from "react"
-import projects from "../Data/portfolio.json"
+import Datas from "../Data/Datas/Data.js"
 
-export default function Projects({datas = projects, itr}) {
-	const idx = `${itr != undefined ? itr : projects.length}`
+export default function Projects({datas = Datas(), itr}) {
+	const idx = `${itr != undefined ? itr : datas.length}`
+	// console.log(datas)
 	return (
 		<div className='grid grid-cols-3 gap-y-10'>
 			{datas.slice(0, idx).map((el) => {
