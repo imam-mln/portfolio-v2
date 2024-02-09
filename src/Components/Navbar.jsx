@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom"
+import {useNavigate, Link} from "react-router-dom"
 
 export default function Navbar() {
 	const navigate = useNavigate()
@@ -43,16 +43,20 @@ export default function Navbar() {
 				<div className='navbar-center hidden lg:flex'>
 					<ul className='text-lg menu menu-horizontal px-1 font-normal gap-5'>
 						<li>
-							<a onClick={() => navigate("/")}>Home</a>
+							<Link to='/'>Home</Link>
+							{/* <a onClick={() => navigate("/")}>Home</a> */}
 						</li>
 						<li>
-							<a onClick={() => navigate("/about")}>About</a>
+							<Link to='/about'>About</Link>
+							{/* <a onClick={() => navigate("/about")}>About</a> */}
 						</li>
 						<li>
-							<a onClick={() => navigate("/portfolio")}>Portfolio</a>
+							<Link to='/portfolio'>Portfolio</Link>
+							{/* <a onClick={() => navigate("/portfolio")}>Portfolio</a> */}
 						</li>
 						<li>
-							<a onClick={() => navigate("/contact")}>Contact</a>
+							<Link to='/contact'>Contact</Link>
+							{/* <a onClick={() => navigate("/contact")}>Contact</a> */}
 						</li>
 					</ul>
 				</div>

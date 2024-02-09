@@ -1,6 +1,6 @@
 // THIRD-PARTY MODULE
 import {useEffect} from "react"
-import {useNavigate} from "react-router-dom"
+import {useNavigate, Link} from "react-router-dom"
 import {Helmet, HelmetProvider} from "react-helmet-async"
 import {Typewriter} from "react-simple-typewriter"
 
@@ -10,15 +10,14 @@ import {MdOutlineWeb} from "react-icons/md"
 import {FaCode} from "react-icons/fa6"
 import {RiRobot2Fill, RiShape2Fill} from "react-icons/ri"
 
+// DATAS
+import Projects from "../Components/Projects"
+
 // IMAGES
 import ImgImam from "../assets/imam.png"
-import oviderBot from "../assets/oviderbot.jpeg"
-import handgunDetection from "../assets/handgun-detection.jpeg"
-import handGestureRemoteControl from "../assets/hand-gesture-remote-control.jpeg"
 
 // CUSTOM COMPONENTS
 import ServiceCard from "../Components/ServiceCard"
-import ProjectCard from "../Components/ProjectCard"
 
 export default function Home() {
 	const navigate = useNavigate()
@@ -133,23 +132,14 @@ export default function Home() {
 								<span> several of them are publicly accessible.</span>
 							</h1>
 						</div>
-						{/* BODY RECENT PROJECTS */}
-						<div className='grid grid-cols-3'>
-							<ProjectCard title='Ovider Bot' desc='One Video Downloader (Ovider) is telegram bot which can download video from many platform' img={oviderBot} link='https://t.me/ovider_bot' />
-							<ProjectCard title='Handgun Detection' link='https://universe.roboflow.com/imam-maulana-b4xet/handgun-detection-jtvaj/model/9' desc='One video downloader lorem ipsum bunhankam' img={handgunDetection} />
-							<ProjectCard link='https://youtu.be/p1pCyFHBK9c' title='Remote Control Car Using Hand Gestures' desc='One video downloader lorem ipsum bunhankam' img={handGestureRemoteControl} />
-						</div>
+						<Projects itr={3} />
+
 						{/* FOOTER RECENT PROJECTS */}
 						<div className='flex justify-end'>
 							<div className='pt-5 pr-10'>
-								<a
-									className='hover:underline text-sky-600 cursor-pointer font-semibold'
-									onClick={() => {
-										navigate("/portfolio")
-									}}
-								>
+								<Link to='/portfolio' className='hover:underline text-sky-600 cursor-pointer font-semibold'>
 									Show all projects ➜
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
