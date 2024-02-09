@@ -5,16 +5,16 @@ import {Helmet, HelmetProvider} from "react-helmet-async"
 import {Typewriter} from "react-simple-typewriter"
 
 // ICONS & SVG
-import gradShape2 from "../assets/grad-shape-2.svg"
-import webDevSVG from "../assets/web-dev.svg"
-import chatBotSVG from "../assets/bot.svg"
-import webScraperSVG from "../assets/web-scraper.svg"
-import graphicDesignSVG from "../assets/graphic.svg"
+import gradShape2 from "../assets/grad-shape.svg"
+import {MdOutlineWeb} from "react-icons/md"
+import {FaCode} from "react-icons/fa6"
+import {RiRobot2Fill, RiShape2Fill} from "react-icons/ri"
 
 // IMAGES
 import ImgImam from "../assets/imam.png"
 import oviderBot from "../assets/oviderbot.jpeg"
-import imgTest from "../assets/image-test.jpg"
+import handgunDetection from "../assets/handgun-detection.jpeg"
+import handGestureRemoteControl from "../assets/hand-gesture-remote-control.jpeg"
 
 // CUSTOM COMPONENTS
 import ServiceCard from "../Components/ServiceCard"
@@ -23,8 +23,8 @@ import ProjectCard from "../Components/ProjectCard"
 export default function Home() {
 	const navigate = useNavigate()
 	useEffect(() => {
+		// window.scrollTo(0, 0)
 		window.addEventListener("scroll", () => {
-			// console.log(window.scrollY)
 			if (window.scrollY > 0) {
 				let navbar = document.getElementById("navbar")
 				navbar.classList.add("border-b-2", "border-b-gray-300")
@@ -39,7 +39,7 @@ export default function Home() {
 			{/* HEADER */}
 			<HelmetProvider>
 				<Helmet>
-					<title>Portfolio - Home</title>
+					<title>IMM-MLN - Home</title>
 				</Helmet>
 			</HelmetProvider>
 			{/* HERO IMAGE */}
@@ -47,14 +47,16 @@ export default function Home() {
 				<div className='relative overflow-hidden'>
 					{/* SHAPES */}
 					<svg className='absolute -scale-x-100 bg-gradient-to-tr  fill-indigo-600 bottom-0 z-10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'>
-						<path d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' class='shape-fill'></path>
+						<path d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' className='shape-fill'></path>
 					</svg>
-					<img src={gradShape2} className='max-w-lg absolute right-44 bottom-20 max-w-2xl select-none' />
 
 					{/* ELEMENTS */}
 					<div className='hero min-h-screen text-black max-w-6xl m-auto'>
-						<div className='hero-content flex-col lg:flex-row-reverse gap-40'>
-							<img src={ImgImam} className='max-h-full select-none' />
+						<div className='flex hero-content gap-x-40 lg:flex-row-reverse'>
+							<div className='relative'>
+								<img src={ImgImam} className=' max-h-full select-none' />
+								<img src={gradShape2} className='absolute -right-16 bottom-20 max-w-lg select-none -z-10' />
+							</div>
 							<div className='text-lg'>
 								<span className='font-semibold '>Hello There! 👋 I am</span>
 								<h1 className='text-6xl font-bold tracking-wide'>Imam Maulana</h1>
@@ -75,6 +77,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+
 			{/* SERVICES */}
 			<section id='services' className='bg-indigo-600 text-white'>
 				<div className='max-w-6xl m-auto pb-20'>
@@ -89,15 +92,23 @@ export default function Home() {
 					</div>
 
 					{/* BODY SERVICES */}
-					<div className='flex gap-5 pb-20'>
-						{/* WEB DEV SERVICE */}
-						<ServiceCard title='Web Dev' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={webDevSVG} />
-						{/* WEB SCRAPER SERVICE */}
-						<ServiceCard title='Web Scraper' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={webScraperSVG} />
-						{/* CHAT BOT SERVICE */}
-						<ServiceCard title='Chat Bot' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={chatBotSVG} />
-						{/* GRAPHIC DESIGN SERVICE */}
-						<ServiceCard title='Graphic Design' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={graphicDesignSVG} />
+					<div className='grid grid-cols-4 gap-10 pb-20 px-10'>
+						<div>
+							{/* WEB DEV SERVICE */}
+							<ServiceCard title='Web Dev' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={<MdOutlineWeb className='w-14 h-auto fill-white' />} />
+						</div>
+						<div>
+							{/* WEB SCRAPER SERVICE */}
+							<ServiceCard title='Web Scraper' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={<FaCode className='w-14 h-auto fill-white' />} />
+						</div>
+						<div>
+							{/* CHAT BOT SERVICE */}
+							<ServiceCard title='Chat Bot' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={<RiRobot2Fill className='w-14 h-auto fill-white' />} />
+						</div>
+						<div>
+							{/* GRAPHIC DESIGN SERVICE */}
+							<ServiceCard title='Graphic Design' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={<RiShape2Fill className='w-14 h-auto fill-white' />} />
+						</div>
 					</div>
 				</div>
 			</section>
@@ -123,9 +134,10 @@ export default function Home() {
 							</h1>
 						</div>
 						{/* BODY RECENT PROJECTS */}
-						<div className='flex'>
+						<div className='grid grid-cols-3'>
 							<ProjectCard title='Ovider Bot' desc='One Video Downloader (Ovider) is telegram bot which can download video from many platform' img={oviderBot} link='https://t.me/ovider_bot' />
-							<ProjectCard title='Remote Control Car Using Hand Gensture' desc='One video downloader lorem ipsum bunhankam' img={imgTest} />
+							<ProjectCard title='Handgun Detection' link='https://universe.roboflow.com/imam-maulana-b4xet/handgun-detection-jtvaj/model/9' desc='One video downloader lorem ipsum bunhankam' img={handgunDetection} />
+							<ProjectCard link='https://youtu.be/p1pCyFHBK9c' title='Remote Control Car Using Hand Gestures' desc='One video downloader lorem ipsum bunhankam' img={handGestureRemoteControl} />
 						</div>
 						{/* FOOTER RECENT PROJECTS */}
 						<div className='flex justify-end'>
@@ -133,7 +145,7 @@ export default function Home() {
 								<a
 									className='hover:underline text-sky-600 cursor-pointer font-semibold'
 									onClick={() => {
-										navigate("/project")
+										navigate("/portfolio")
 									}}
 								>
 									Show all projects ➜

@@ -7,7 +7,7 @@ import Footer from "./Components/Footer"
 // PAGES
 import Home from "./Pages/Home"
 import About from "./Pages/About"
-import Project from "./Pages/Project"
+import Portfolio from "./Pages/Portfolio"
 import Contact from "./Pages/Contact"
 import NotFound from "./Pages/NotFound"
 
@@ -18,7 +18,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/about' element={<About />} />
-				<Route path='/project' element={<Project />} />
+				<Route path='/portfolio' element={<Portfolio />} />
 				<Route path='/contact' element={<Contact />} />
 				<Route path='*' element={<NotFound />} />
 			</Routes>
