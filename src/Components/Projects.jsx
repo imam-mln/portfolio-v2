@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react"
-import Datas from "../Data.jsx"
+import Datas from "../Data/Projects.js"
 
 export default function Projects({datas = Datas, itr}) {
 	const idx = `${itr != undefined ? itr : datas.length}`
