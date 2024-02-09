@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react"
-import Datas from "../Data/Datas/Data.js"
+import Datas from "../Data.jsx"
 
-export default function Projects({datas = Datas(), itr}) {
+export default function Projects({datas = Datas, itr}) {
 	const idx = `${itr != undefined ? itr : datas.length}`
 	// console.log(datas)
 	return (

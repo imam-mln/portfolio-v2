@@ -1,12 +1,14 @@
 import {FaInstagram, FaLinkedinIn, FaFacebookF} from "react-icons/fa"
 import {FiGithub} from "react-icons/fi"
 
+import immLogo from "../assets/logo-imm.png"
+
 export default function Footer() {
 	return (
 		<div className='bg-neutral'>
 			<footer className='footer items-center p-4  text-neutral-content max-w-6xl m-auto justify-between'>
 				<aside className='items-center grid-flow-col'>
-					<img className='grayscale w-10' src='/logo-imm.png' alt='' />
+					<img className='grayscale w-10' src={immLogo} alt='' />
 					<p>
 						<span>© 2024 Imam Maulana.</span>
 						<br />
