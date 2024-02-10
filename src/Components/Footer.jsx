@@ -25,7 +25,7 @@ export default function Footer() {
 						<div className='flex flex-col'>
 							{/* PLATFORMS */}
 							<div className='flex justify-between pb-3'>
-								<a target='_blank' className='bg-gray-400 rounded-full p-2 hover:bg-white' href='https://www.instagram.com/imm.mln/'>
+								<a target='_blank' className='bg-gray-400 rounded-full p-2 hover:bg-white' href='https://www.instagram.com/imm.mln?igsh=MWQzbW16d2MxMDQ4OQ=='>
 									<FaInstagram className='fill-gray-700 w-6 h-auto' />
 								</a>
 								<a href='https://www.linkedin.com/in/imammay24/' target='_blank' className='hover:bg-white bg-gray-400 rounded-full p-2'>
