@@ -13,10 +13,10 @@ export default function About() {
 			// console.log(window.scrollY)
 			if (window.scrollY > 0) {
 				let navbar = document.getElementById("navbar")
-				navbar.classList.add("border-b-2", "border-b-gray-300")
+				navbar.classList.add("md:border-b-2", "md:border-b-gray-300")
 			} else {
 				let navbar = document.getElementById("navbar")
-				navbar.classList.remove("border-b-2", "border-b-gray-300")
+				navbar.classList.remove("md:border-b-2", "md:border-b-gray-300")
 			}
 		})
 	}, [])
@@ -30,11 +30,12 @@ export default function About() {
 			</HelmetProvider>
 			{/* MOTTO & ABOUT ME */}
 			<section>
-				<div className='max-w-7xl mx-auto'>
-					<div className=' px-10 flex max-w-7xl mx-auto text-black gap-28 py-40'>
-						<div className=' w-1/2 mx-auto'>
-							<h1 className='text-xl font-semibold text-gray-400 tracking-wide'>Motto</h1>
-							<h1 className='text-5xl font-bold'>
+				<div className='divider md:hidden'></div>
+				<div className='max-w-6xl mx-auto'>
+					<div className=' px-10 flex flex-col md:flex-row max-w-6xl mx-auto text-black gap-y-16 md:gap-28 py-16 md:py-40'>
+						<div className=' md:w-1/2 mx-auto'>
+							<h1 className='md:text-xl font-semibold text-gray-400 tracking-wide'>Motto</h1>
+							<h1 className='text-3xl md:text-5xl font-bold'>
 								<span className=''>
 									Learning isn't about <span className='text-gray-400'>achievement</span>
 									{`, it's about `}
@@ -42,9 +43,9 @@ export default function About() {
 								</span>
 							</h1>
 						</div>
-						<div className='w-1/2 m-auto'>
-							<h1 className='text-3xl font-extrabold pb-3 uppercase'>About me</h1>
-							<p className='tracking-wider text-gray-400'>
+						<div className='md:w-1/2'>
+							<h1 className='text-xl md:text-3xl font-extrabold pb-3 uppercase'>About me</h1>
+							<p className='text-[12px] text-justify md:text-start md:text-sm tracking-wider text-gray-400'>
 								&emsp;&emsp;A final-year student majoring in informatics engineering from <span className='text-indigo-600 '>{` STMIK IKMI Cirebon `}</span> who is interested in <span className='text-indigo-600 '>{` website development `}</span>and <span className='text-indigo-600 '>{` digital design`}</span>. Besides those, I am always enthusiastic about learning new things about popular technologies within the informatics fields with the purpose of improving new skills that might be needed by
 								an institution or company.
 							</p>
@@ -56,66 +57,66 @@ export default function About() {
 
 			{/* SKILLS & TOOLS */}
 			<section>
-				<div className='max-w-6xl m-auto'>
+				<div className='max-w-6xl m-auto py-10'>
 					{/* HEADER SKILLS & TOOLS */}
-					<div className='flex flex-col m-auto pt-10 pb-16 text-black'>
-						<h1 className='m-auto text-5xl font-extrabold pb-5'>Skills & Tools</h1>
-						<h1 className='m-auto text-xl text-gray-400 text-center'>
+					<div className='flex flex-col m-auto pb-10 text-black'>
+						<h1 className='text-3xl m-auto md:text-5xl font-extrabold pb-2 md:pb-5'>Skills-Set</h1>
+						<h1 className='m-auto text-xs md:text-xl text-gray-400 text-center'>
 							<span>These are some of my skills and tools usage</span>
 							<br />
 							<span>with level information.</span>
 						</h1>
 					</div>
 					{/* WEB DEV SKILLS & TOOLS */}
-					<div className='max-w-7xl m-auto'>
+					<div className='px-10 pb-2 md:pb-3 max-w-6xl m-auto'>
 						<div>
-							<h1>Web Development</h1>
+							<h1 className='text-xs md:text-lg'>Web Development</h1>
 						</div>
-						<div className='m-auto flex flex-wrap gap-10 py-5 justify-start max-w-6xl'>
+						<div className='m-auto grid grid-cols-3 gap-y-2 md:grid-cols-4 gap-x-2 md:gap-x-10 max-w-6xl'>
 							<div>
-								<SkillToolsCard title='NodeJS' lvl={3} icon={<FaNodeJs className='h-auto w-12 fill-lime-500' />} />
+								<SkillToolsCard title='NodeJS' lvl={3} icon={<FaNodeJs className='h-auto w-6 md:w-10 fill-lime-500' />} />
 							</div>
 							<div>
-								<SkillToolsCard title='Python' lvl={4} icon={<FaPython className='h-auto w-12 fill-blue-800' />} />
+								<SkillToolsCard title='Python' lvl={4} icon={<FaPython className='h-auto w-6 md:w-10 fill-blue-800' />} />
 							</div>
 							<div>
-								<SkillToolsCard title='Tailwind' lvl={4} icon={<SiTailwindcss className='h-auto w-12 fill-blue-500' />} />
+								<SkillToolsCard title='Tailwind' lvl={4} icon={<SiTailwindcss className='h-auto w-6 md:w-10 fill-blue-500' />} />
 							</div>
 							<div>
-								<SkillToolsCard title='ReactJS' lvl={2} icon={<FaReact className='h-auto w-12 fill-sky-400' />} />
+								<SkillToolsCard title='ReactJS' lvl={2} icon={<FaReact className='h-auto w-6 md:w-10 fill-sky-400' />} />
 							</div>
 						</div>
 					</div>
 					{/* GRAPHIC DESIGN SKILLS & TOOLS */}
-					<div className='max-w-6xl m-auto'>
+					<div className='px-10 py-2 md:py-3 max-w-6xl m-auto'>
 						<div>
-							<h1>Graphic Design</h1>
+							<h1 className='text-xs md:text-lg'>Graphic Design</h1>
 						</div>
-						<div className='m-auto flex flex-wrap gap-10 py-5 justify-start max-w-6xl'>
+						<div className='m-auto grid grid-cols-3 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-10 max-w-6xl'>
 							<div>
-								<SkillToolsCard title='Photoshop' lvl={4} icon={<SiAdobephotoshop className='h-auto w-12 fill-blue-950' />} />
+								<SkillToolsCard title='Photoshop' lvl={3} icon={<SiAdobephotoshop className='h-auto w-6 md:w-10 fill-blue-950' />} />
 							</div>
 							<div>
-								<SkillToolsCard title='IIlustrator' lvl={2} icon={<SiAdobeillustrator className='h-auto w-12 fill-orange-950' />} />
+								<SkillToolsCard title='Illustrator' lvl={2} icon={<SiAdobeillustrator className='h-auto w-6 md:w-10 fill-orange-950' />} />
 							</div>
 							<div>
-								<SkillToolsCard title='Canva' lvl={5} icon={<SiCanva className='h-auto w-12 fill-sky-500' />} />
+								<SkillToolsCard title='Canva' lvl={5} icon={<SiCanva className='h-auto w-6 md:w-10 fill-sky-500' />} />
 							</div>
 						</div>
 					</div>
 					{/* Additional */}
-					<div className='max-w-6xl m-auto pb-20'>
+					<div className='px-10 py-2 md:py-3 max-w-6xl m-auto'>
 						<div>
-							<h1>Additional</h1>
+							<h1 className='text-xs md:text-lg'>Addtional</h1>
 						</div>
-						<div className='m-auto flex flex-wrap gap-10 py-5 justify-start max-w-6xl'>
+						<div className='m-auto grid grid-cols-3 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-10 max-w-6xl'>
 							<div>
-								<SkillToolsCard title='Arduino' lvl={3} icon={<SiArduino className='h-auto w-12 fill-teal-500' />} />
+								<SkillToolsCard title='Arduino' lvl={3} icon={<SiArduino className='h-auto w-6 md:w-10 fill-teal-500' />} />
 							</div>
 						</div>
 					</div>
-					<div className='divider'></div>
 				</div>
+				<div className='divider max-w-sm md:max-w-6xl mx-auto'></div>
 			</section>
 
 			{/* EDUCATION & EXPERIENCE*/}

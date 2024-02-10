@@ -19,7 +19,7 @@ const datas = [
 	},
 	{
 		title: "Remote Control Car Using Hand Gesture",
-		desc: "One Video Downloader (Ovider) is telegram bot which can download video from many platform",
+		desc: "Remote control car using hand gesture with 5 instruction like forward, backward, turn left, turn right and stop",
 		img: rccHandGesture,
 		link: "https://youtu.be/p1pCyFHBK9c",
 	},
@@ -31,7 +31,7 @@ const datas = [
 	},
 	{
 		title: "Automated Stock Control (ASCO)",
-		desc: "Scrape data from Grab's Website import data to Dodolans App",
+		desc: "The solution of stock checking with automation computer vision exatcly object detection",
 		img: asco,
 		link: "https://youtu.be/ITJhbdym_10",
 	},

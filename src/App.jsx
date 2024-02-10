@@ -15,13 +15,21 @@ function App() {
 	return (
 		<Router basename='/web-app-portfolio/'>
 			<Navbar />
-			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/about' element={<About />} />
-				<Route path='/portfolio' element={<Portfolio />} />
-				<Route path='/contact' element={<Contact />} />
-				<Route path='*' element={<NotFound />} />
-			</Routes>
+			<div className='hidden md:block'>
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/portfolio' element={<Portfolio />} />
+					<Route path='/contact' element={<Contact />} />
+					<Route path='*' element={<NotFound />} />
+				</Routes>
+			</div>
+			<div className='md:hidden overflow-hidden'>
+				<Home />
+				<About />
+				<Portfolio />
+				<Contact />
+			</div>
 			<Footer />
 		</Router>
 	)

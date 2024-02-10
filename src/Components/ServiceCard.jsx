@@ -1,12 +1,12 @@
 export default function ServiceCard({title, desc, icon}) {
 	return (
-		<div className='card w-full bg-white shadow-xl text-black max-w-xs'>
-			<div className='m-auto pt-10'>
-				<div className='m-auto p-5 rounded-full bg-indigo-600'>{icon}</div>
+		<div className='card w-full bg-white shadow-xl text-black max-w-xs py-5 md:py-10'>
+			<div className='m-auto pb-3 md:pb-7'>
+				<div className='m-auto p-3 md:p-5 rounded-full bg-indigo-600'>{icon}</div>
 			</div>
-			<div className='card-body mb-2'>
-				<h2 className='card-title text-xl m-auto font-extrabold'>{title}</h2>
-				<h2 className='text-center text-gray-400 text-sm'>{desc}</h2>
+			<div className='card-body py-0 xs:p-4'>
+				<h2 className='card-title text-sm md:text-xl m-auto font-extrabold'>{title}</h2>
+				<h2 className='text-center text-gray-400 text-[9px] md:text-sm'>{desc}</h2>
 			</div>
 		</div>
 	)

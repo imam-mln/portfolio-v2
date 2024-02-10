@@ -5,10 +5,10 @@ export default function Projects({datas = Datas, itr}) {
 	const idx = `${itr != undefined ? itr : datas.length}`
 	// console.log(datas)
 	return (
-		<div className='grid grid-cols-3 gap-y-10'>
+		<div className='grid md:grid-cols-3 gap-y-10'>
 			{datas.slice(0, idx).map((el) => {
 				return (
-					<div key={el.title} className='m-auto card card-compact max-w-xs shadow-xl group'>
+					<div key={el.title} className='m-auto card card-compact md:max-w-xs shadow-lg group'>
 						{/* IMAGE PROJECT */}
 						<figure className='relative h-auto'>
 							<div className='absolute h-full w-full bg-black bg-opacity-50 invisible group-hover:visible'></div>
