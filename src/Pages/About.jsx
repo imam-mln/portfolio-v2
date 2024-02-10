@@ -30,12 +30,12 @@ export default function About() {
 			</HelmetProvider>
 			{/* MOTTO & ABOUT ME */}
 			<section>
-				<div className='divider md:hidden'></div>
-				<div className='max-w-6xl mx-auto'>
-					<div className=' px-10 flex flex-col md:flex-row max-w-6xl mx-auto text-black gap-y-16 md:gap-28 py-16 md:py-40'>
+				<div className='mx-auto divider max-w-xs md:hidden'></div>
+				<div className='max-w-6xl mx-auto py-12'>
+					<div className=' px-10 flex flex-col md:flex-row max-w-6xl mx-auto text-black gap-y-16 md:gap-28 md:py-40'>
 						<div className=' md:w-1/2 mx-auto'>
 							<h1 className='md:text-xl font-semibold text-gray-400 tracking-wide'>Motto</h1>
-							<h1 className='text-3xl md:text-5xl font-bold'>
+							<h1 className='text-2xl md:text-5xl font-bold'>
 								<span className=''>
 									Learning isn't about <span className='text-gray-400'>achievement</span>
 									{`, it's about `}
@@ -44,15 +44,15 @@ export default function About() {
 							</h1>
 						</div>
 						<div className='md:w-1/2'>
-							<h1 className='text-xl md:text-3xl font-extrabold pb-3 uppercase'>About me</h1>
-							<p className='text-[12px] text-justify md:text-start md:text-sm tracking-wider text-gray-400'>
+							<h1 className='text-lg md:text-3xl font-extrabold pb-1 uppercase'>About me</h1>
+							<p className='text-[12px] text-justify md:text-start md:text-sm md:tracking-wider text-gray-400'>
 								&emsp;&emsp;A final-year student majoring in informatics engineering from <span className='text-indigo-600 '>{` STMIK IKMI Cirebon `}</span> who is interested in <span className='text-indigo-600 '>{` website development `}</span>and <span className='text-indigo-600 '>{` digital design`}</span>. Besides those, I am always enthusiastic about learning new things about popular technologies within the informatics fields with the purpose of improving new skills that might be needed by
 								an institution or company.
 							</p>
 						</div>
 					</div>
-					<div className='divider'></div>
 				</div>
+				<div className='mx-auto max-w-xs divider'></div>
 			</section>
 
 			{/* SKILLS & TOOLS */}

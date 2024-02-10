@@ -24,7 +24,7 @@ function App() {
 					<Route path='*' element={<NotFound />} />
 				</Routes>
 			</div>
-			<div className='md:hidden overflow-hidden'>
+			<div onResize={() => refreh()} className='md:hidden overflow-hidden'>
 				<Home />
 				<About />
 				<Portfolio />

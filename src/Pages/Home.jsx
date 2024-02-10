@@ -42,7 +42,7 @@ export default function Home() {
 				</Helmet>
 			</HelmetProvider>
 			{/* HERO IMAGE */}
-			<section id='hero' className='py-14'>
+			<section id='hero' className='py-10'>
 				<div className=' w-full text-black md:max-w-6xl mx-auto'>
 					<div className='flex p gap-0 flex-col md:max-w-6xl lg:flex-row-reverse'>
 						<div className='m-auto'>
@@ -64,7 +64,7 @@ export default function Home() {
 								<br className='hidden md:block' />
 								<span>Let's find your problem solution with me!</span>
 							</p>
-							<button className='mt-5 btn btn-sm md:btn-md bg-indigo-700 border-none text-white font-normal text-sm md:text-lg'>Contact Me</button>
+							<button className='mt-5 btn btn-sm md:btn-md bg-indigo-700 border-none text-white text-sm md:text-lg'>Contact Me</button>
 						</div>
 					</div>
 				</div>
@@ -91,15 +91,15 @@ export default function Home() {
 						</div>
 						<div>
 							{/* WEB SCRAPER SERVICE */}
-							<ServiceCard title='Web Scraper' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={<FaCode className='w-20 max-w-6 md:max-w-14 h-auto fill-white' />} />
+							<ServiceCard title='Web Scraper' desc='Data collection needs to be automated using web scrapers' icon={<FaCode className='w-20 max-w-6 md:max-w-14 h-auto fill-white' />} />
 						</div>
 						<div>
 							{/* CHAT BOT SERVICE */}
-							<ServiceCard title='Chat Bot' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={<RiRobot2Fill className='w-20 max-w-6 md:max-w-14 h-auto fill-white' />} />
+							<ServiceCard title='Chat Bot' desc='Automate your job easily with the chat bot 24/07 active' icon={<RiRobot2Fill className='w-20 max-w-6 md:max-w-14 h-auto fill-white' />} />
 						</div>
 						<div>
 							{/* GRAPHIC DESIGN SERVICE */}
-							<ServiceCard title='Graphic Design' desc='Lorem ipsum bunhankam eaa ea buka sitik joss anjay mabar' icon={<RiShape2Fill className='w-20 max-w-6 md:max-w-14 h-auto fill-white' />} />
+							<ServiceCard title='Graphic Design' desc='Create a logo, social media post, or marketing design that needs' icon={<RiShape2Fill className='w-20 max-w-6 md:max-w-14 h-auto fill-white' />} />
 						</div>
 					</div>
 				</div>
